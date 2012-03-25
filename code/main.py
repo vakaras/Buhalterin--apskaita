@@ -194,10 +194,10 @@ def autorine_be_darbo(*args):
     table = TableEnvironment((1, 1))
 
     if args[4] == 'popierius':
-        money = Money(int(args[3]))
+        money = Money(float(args[3]))
     else:
-        money = Money(int(args[3])/0.805)
-        table.add_row('Į rankas:', currency(int(args[3])))
+        money = Money(float(args[3])/0.805)
+        table.add_row('Į rankas:', currency(float(args[3])))
     table.add_row('Ant popieriaus:', money.on_paper)
     table.add_row('GPM:', money.tax_employee(15))
     table.add_row('PSDF:', money.tax_employee_half(9))
@@ -216,10 +216,10 @@ def autorine_su_darbu(*args):
     table = TableEnvironment((1, 1))
 
     if args[4] == 'popierius':
-        money = Money(int(args[3]))
+        money = Money(float(args[3]))
     else:
-        money = Money(int(args[3])/0.76)
-        table.add_row('Į rankas:', currency(int(args[3])))
+        money = Money(float(args[3])/0.76)
+        table.add_row('Į rankas:', currency(float(args[3])))
     table.add_row('Ant popieriaus:', money.on_paper)
     table.add_row('GPM:', money.tax_employee(15))
     table.add_row('PSDF:', money.tax_employee(9))
@@ -238,9 +238,9 @@ def darbo(*args):
     table = TableEnvironment((1, 1))
 
     if args[4] == 'popierius':
-        money = WorkMoney(int(args[3]))
+        money = WorkMoney(float(args[3]))
     else:
-        to_hands = int(args[3])
+        to_hands = float(args[3])
         if to_hands <= 750.5:
             on_paper = (to_hands - 70.5)/0.76
         elif to_hands >= 2394.0:
@@ -259,6 +259,33 @@ def darbo(*args):
     table.add_row('VSDF:', money.tax_employer(30.98))
     table.add_row('GF:', money.tax_employer(0.2))
     table.add_row('Darbo vietos kaina:', money.cost)
+    table.add_row('Įmonė sumoka mokesčių:',
+            subtract(money._cost, money._on_paper_real))
+
+    print(str(table))
+
+
+def darbo_be_npd(*args):
+    """ Apskaičiuoja viską darbo sutarčiai.
+    """
+    table = TableEnvironment((1, 1))
+
+    if args[4] == 'popierius':
+        money = Money(float(args[3]))
+    else:
+        money = Money(float(args[3])/0.76)
+        table.add_row('Į rankas:', currency(float(args[3])))
+    table.add_row('Ant popieriaus:', money.on_paper)
+    table.add_row('GPM:', money.tax_employee(15))
+    table.add_row('PSDF:', money.tax_employee(9))
+    table.add_row('Į rankas:', money.to_hands)
+    table.add_row('Darbuotojas sumoka:',
+            subtract(money._on_paper, money._to_hands))
+    table.add_row('VSDF:', money.tax_employer(30.98))
+    table.add_row('GF:', money.tax_employer(0.2))
+    table.add_row('Darbo vietos kaina:', money.cost)
+    table.add_row('Įmonė sumoka mokesčių:',
+            subtract(money._cost, money._on_paper))
 
     print(str(table))
 
