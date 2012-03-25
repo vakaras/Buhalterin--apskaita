@@ -1,6 +1,24 @@
 \documentclass[12pt, a4paper, xcolor=table]{documentation}
 
 \usepackage{style}
+\usepackage{python3ba}
+\usepackage{tabularx}
+
+\newcounter{taskcounter}
+\newcounter{subtaskcounter}
+
+\newenvironment{tasks}{\setcounter{taskcounter}{1}}{}
+
+\newenvironment{task}{%
+  \strong{\arabic{taskcounter} užduotis.} \\
+  \setcounter{subtaskcounter}{1}
+  }{\addtocounter{taskcounter}{1}}
+\newenvironment{subtask}{%
+  \strong{\arabic{taskcounter} užduoties \arabic{subtaskcounter} dalis.} \\
+  \addtocounter{subtaskcounter}{1}
+  }{}
+\newenvironment{condition}{\emph{Sąlyga.}}{\\}
+\newenvironment{solution}{\emph{Sprendimas.\\}}{}
 
 \begin{document}
   \input{global-config.tex}

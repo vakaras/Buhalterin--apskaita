@@ -1,0 +1,44 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{python3ba}
+
+\newcounter{pythoninvokecounter}
+\setcounter{pythoninvokecounter}{0}
+
+\newwrite\pythonArg
+\newcommand\pythonba[2]
+{
+  \immediate\write18 {%
+    python3 code/main.py "#1" "\arabic{pythoninvokecounter}" %
+    #2 > "dist/\jobname.python3ba.out"}
+  \input{\jobname.python3ba.out}
+  \addtocounter{pythoninvokecounter}{1}
+}
+
+\newwrite\@out
+
+\begingroup \catcode `|=0 \catcode `[=1
+\catcode`]=2 \catcode `\{=12 \catcode `\}=12
+\catcode`\\=12 |gdef|@xpythonaienv#1\end{pythonaienv}[|immediate|write|@out[#1]|end[pythonaienv]]
+|endgroup
+
+\def\pythonaienv{\kernel@ifnextchar [{\@pythonaienv}{\@pythonaienv[]}}
+
+\def\@pythonaienv[#1]{%
+\gdef\@pythonaienvcommand{#1}
+\immediate\openout\@out=\jobname.python3ai.in
+\newlinechar='15
+\begingroup \catcode`\^^M=12 %
+\let\do\@makeother\dospecials\obeyspaces%
+\@xpythonaienv}
+
+\def\endpythonaienv{%
+\endgroup
+\immediate\closeout\@out
+\@writemodule
+\immediate\write18 {%
+  python3 code/main.py "\@pythonaienvcommand" %
+  "dist/\jobname.python3ai.in" "dist/\jobname.python3ai.out" %
+  "\arabic{pythoninvokecounter}"}
+\immediate\input{\jobname.python3ai.out}
+\addtocounter{pythoninvokecounter}{1}
+}

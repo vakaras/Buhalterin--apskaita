@@ -1,215 +1,184 @@
-\chapter{Uždaviniai}
+\chapter{Uždaviniai: Pajamų, gautų iš autorinių sutarčių, apmokestinimas}
 
-\begin{exmp}
-  Apskaičiuokite autoriaus ir atlygį išmokančio asmens, UAB „X“,
-  visus Jums žinomus mokėtinus mokesčius, jeigu pastaroji su
-  darbo santykiais nesusijusiam asmeniui pažadėjo 350 Lt autorinio
-  atlyginimo už žurnalo moterims viršelio maketą.
+\begin{tasks}
 
-  Į rankas jis gauna 350 Lt į rankas.
+  \begin{task}
+    \begin{condition}
+      Apskaičiuokite autoriaus ir atlygį išmokančio asmens, UAB „X“,
+      visus Jums žinomus mokėtinus mokesčius, jeigu pastaroji su
+      darbo santykiais nesusijusiam asmeniui pažadėjo 350 Lt autorinio
+      atlyginimo už žurnalo moterims viršelio maketą.
+    \end{condition}
+    \begin{solution}
+      Tuos $350 Lt$ jis gaus į rankas. Be to yra nesusijęs darbo
+      santykiais todėl:
 
-  \begin{align*}
-    \t{Suma ant popieriaus:} &\frac{350}{100\%-15\%-\frac{9\%}{2}}
-    &= 434,78 Lt \\
-    \t{Darbuotojas sumoka:} &434,78 - 350 &= 84,78 Lt \\
-    \t{Iš jų gyventojų pajamų (GPM):} &434,78 \cdot 15\% &= 65,22 Lt \\
-    \t{Iš jų … (PSDF):} &\frac{434,78}{2} \cdot 9\% &= 19,56 Lt \\
-    \t{Darbdavys sumoka VSDF:} & \frac{434,78}{2} \cdot 29,7\%
-      &= 64,57 Lt\\
-    \t{Darbo vietos kaina:} & 434,78 + 64,57 = 499,35 Lt \\
-  \end{align*}
+      \pythonba{autorine|be|darbo}{350 rankos}
 
-\end{exmp}
+    \end{solution}
+  \end{task}
 
-\begin{exmp}
-  Apskaičiuokite autoriaus ir atlygį išmokančio asmens, UAB „X“, visus
-  Jums žinomus mokėtinus mokesčius, jeigu pastaroji savo darbuotojui,
-  kuris pagal darbo sutartį yra techninis redaktorius, už
-  parašytą straipsnį žurnalui į jo banko sąskaitą pervedė 500 Lt.
+  \begin{task}
+    \begin{condition}
+      Apskaičiuokite autoriaus ir atlygį išmokančio asmens, UAB „X“, visus
+      Jums žinomus mokėtinus mokesčius, jeigu pastaroji savo darbuotojui,
+      kuris pagal darbo sutartį yra techninis redaktorius, už
+      parašytą straipsnį žurnalui į jo banko sąskaitą pervedė 500 Lt.
+    \end{condition}
+    \begin{solution}
+      Tie $500 Lt$ yra į rankas. Kadangi susijęs darbo santykiais, tai:
+      
+      \pythonba{autorine|su|darbu}{500 rankos}
 
-  \begin{align*}
-    \t{Į rankas:} & 500Lt \\
-    \t{Ant popieriaus:} & \frac{500}{0,76} &= 657,89 Lt \\
-    \t{GPM:} & 98,68 Lt \\
-    \t{PSDF:} & 59,21 Lt \\
-    \t{VSDF:} & 203,81 Lt \\
-    \t{Įmonės sąnaudos:} & 657,89 + 203,81 = 851,7 Lt \\
-  \end{align*}
-\end{exmp}
+    \end{solution}
+  \end{task}
 
-\begin{exmp}
-  Apskaičiuokite autoriaus ir atlygį išmokančio asmens, UAB „X“, su
-  kuria yra sudaryta darbo sutartis, pagal kurią darbuotojas rašo
-  straipsnius žurnalui ir gauna 1200 Lt mėnesinio atlyginimo,
-  visus Jums žinomus mokėtinus mokesčius, jeigu pastaroji 2012-04-01
-  žurnalistui, už parašytą straipsnį sumokėjo sutartyje nurodytą
-  2000 Lt atlygį.
+  \begin{task}
+    \begin{condition}
+      Apskaičiuokite autoriaus ir atlygį išmokančio asmens, UAB „X“, su
+      kuria yra sudaryta darbo sutartis, pagal kurią darbuotojas rašo
+      straipsnius žurnalui ir gauna 1200 Lt mėnesinio atlyginimo,
+      visus Jums žinomus mokėtinus mokesčius, jeigu pastaroji 2012-04-01
+      žurnalistui, už parašytą straipsnį sumokėjo sutartyje nurodytą
+      2000 Lt atlygį.
+    \end{condition}
+    \begin{solution}
+      Šiuo atveju autorinės sutarties taikyti negalima. Būtina
+      taikyti darbo sutartį. Kadangi tiek 1200 Lt, tiek 2000 Lt
+      yra ant popieriaus, tai iš viso žurnalistas tą mėnesį
+      ant popieriaus gavo 3200 Lt.
 
-  Šiuo atveju sudaryti autorinės sutarties negalima.
-  GPM = 15\%
-  PSDF = 9\%
-  VSDF = 30,98\%
-  NPD netaikom, nes gauta suma yra didesnė už 3100 Lt.
+      \pythonba{darbo}{3200 popierius}
 
-  Įmonė dar moka įmokas į garantinį fondą, kurios yra 0,2\% nuo
-  visos sumos.
+    \end{solution}
+  \end{task}
 
-  \begin{align*}
-    \t{Ant popieriaus:} & 3200 Lt \\
-    \t{GPM:} & 480 Lt \\
-    \t{PSD:} & 288 Lt \\
-    \t{Į rankas:} & 2432 Lt \\
-    \t{Įmonės išlaidos:} & 4191 Lt \\
-    \t{VSDF:} & 991,36 Lt \\
-    \t{Garantinis fondas (GF):} & 6,4 Lt \\
-    \t{Įmonės sąnaudos:} & 4197,76 Lt \\
-  \end{align*}
-\end{exmp}
+  \begin{task}
+    \begin{condition}
+      Apskaičiuokite autoriaus ir atlygį išmokančio asmens, UAB
+      „X“, visus Jums žinomus mokėtinus mokesčius, jeigu
+      pastaroji 2012-01-20 architektui, dirbančiam UAB „Y“, į jo
+      banko sąskaitą pervedė 8200 Lt už pateiktą naujojo
+      administracinio pastato projektą.
+    \end{condition}
+    \begin{solution}
+      Kadangi jis nedirba įmonėje „X“, tai jis už autorinį turi mokėti
+      mažesnius mokesčius.
 
-\begin{exmp}
-  Apskaičiuokite autoriaus ir atlygį išmokančio asmens, UAB „X“,
-  visus Jums žinomus mokėtinus mokesčius, jeigu pastaroji 2012-01-20
-  architektui, dirbančiam UAB „Y“, į jo banko sąskaitą pervedė
-  8200 Lt už pateiktą naujojo administracinio pastato projektą.
+      \pythonba{autorine|be|darbo}{8200 rankos}
 
-  Kadangi jis nedirba įmonėje „Y“, tai jis už autorinį turi mokėti
-  mažesnius mokesčius.
+    \end{solution}
+  \end{task}
 
-  \begin{align*}
-    \t{Į rankas:} & 8200 Lt \\
-    \t{Ant popieriaus:} & \frac{8200}{80,5\%} &= 10186,34 Lt \\
-    \t{GPM:} & 1527,95 Lt \\
-    \t{PSDF:} & 458,39 Lt \\
-    \t{VSDF:} & 1512,67 Lt \\
-    \t{Įmonė sumoka:} & 11699,00 Lt \\
-  \end{align*}
+  \begin{task}
+    \begin{condition}
+      Apskaičiuokite autoriaus ir atlygį išmokančio asmens, UAB „X“,
+      visus Jums žinomus mokėtinus mokesčius, jeigu pastaroji dizaineriui,
+      kuris į kuriamą interjerą teikia tik UAB „X“ prekes, moka 2\%
+      nuo prekių vertės, kuri už 2012-03-15 kurtą interjerą siekė
+      350 000 Lt.
+    \end{condition}
+    \begin{solution}
+      Laikome, kad tuos du procentus jis gauna ant popieriaus:
+      $350 000 \cdot 2\% = 7000 Lt$. Kadangi dizaineris su UAB „X“
+      gali būti sudaręs tiek autorinę, tiek darbo sutartį, tai
+      paskaičiuojame abiem variantais.
 
-\end{exmp}
+      Jei autorinė:
 
-\begin{exmp}
-  Apskaičiuokite autoriaus ir atlygį išmokančio asmens, UAB „X“,
-  visus Jums žinomus mokėtinus mokesčius, jeigu pastaroji dizaineriui,
-  kuris į kuriamą interjerą teikia tik UAB „X“ prekes, moka 2\%
-  nuo prekių vertės, kuri 2012-03-15 kurtą interjerą siekė
-  350 000 Lt.
+      \pythonba{autorine|be|darbo}{7000 popierius}
 
-  Pagal autorinį:
-  \begin{align*}
-    \t{Ant popieriaus:} & 7000 Lt \\
-    \t{Į rankas:} & 5635 Lt \\
-    \t{GPM:} & 1050 Lt \\
-    \t{PSD:} & 315 Lt \\
-    \t{VSDF:} & 1039,50 Lt \\
-    \t{Darbo vietos kaina:} & 8039,50 Lt \\
-  \end{align*}
+      Jei darbo:
 
-  Pagal darbo sutartį:
-  \begin{align*}
-    \t{Ant popieriaus:} & 7000 Lt \\
-    \t{Į rankas:} & 5320 Lt \\
-    \t{GPM:} & 1050 Lt \\
-    \t{PSD:} & 630 Lt \\
-    \t{VSDF:} & 2168,60 Lt \\
-    \t{Gf:} & 14 Lt \\
-    \t{Darbo vietos kaina:} & 9182,60 Lt \\
-  \end{align*}
-\end{exmp}
+      \pythonba{darbo}{7000 popierius}
 
-\begin{exmp}
-  Apskaičiuokit individualios įmonės „X“, PVM mokėtoja, kurioja dirba
-  2 darbuotojai, praeitų metų pajamos siekė 320 000 Lt, kuri
-  užsiima žurnalų leidyba, visus Jums žinomus mokėtinus mokesčius,
-  jeigu per 2011 metų laikotarpį:
-  \begin{itemize}
-    \item VU darbuotojui, su kuriuo nebuvo pasirašyta autorinė sutartis,
-      už parašyta straipsnį į jo banko sąskaitą pervedė 600 Lt;
+    \end{solution}
+  \end{task}
 
-      \begin{note}
+  \begin{task}
+    \begin{condition}
+      Apskaičiuokite individualios įmonės „X“, PVM mokėtojos, kurioje dirba
+      2 darbuotojai, praeitų metų pajamos siekė 320 000 Lt, kuri
+      užsiima žurnalų leidyba, visus Jums žinomus mokėtinus mokesčius,
+      jeigu per 2011 metų laikotarpį.
+    \end{condition}
+
+    \begin{subtask}
+      \begin{condition}
+        VU darbuotojui, su kuriuo nebuvo pasirašyta autorinė sutartis,
+        už parašyta straipsnį į jo banko sąskaitą pervedė 600 Lt;
+      \end{condition}
+      \begin{solution}
         Galima nesudaryti autorinės sutarties, pakanka žodinio susitarimo,
         bet tada išlieka grėsmė, kad kas nors kitas panaudos tą
         straipsnį. Šiuo atveju reikia mokėti mokesčius pagal
         autorinę sutartį.
-      \end{note}
-      \begin{align*}
-        \t{Į rankas:} & 600 Lt \\
-        \t{GPM:} & 111,80 Lt \\
-        \t{PSD:} & 33,54 Lt \\
-        \t{Ant popieriaus:} & 745,34 Lt \\
-        \t{VSD:} & 110,68 Lt \\
-        \t{Įmonės sąnaudos:} & 856,02 \\
-      \end{align*}
 
-    \item redakcijos darbuotojui A, žurnalistui, kas mėnesį pervedė
-      1500 Lt dydžio atlyginimą į jo banko sąskaitą;o
+        \pythonba{autorine|be|darbo}{600 rankos}
 
-      Šiuo atveju turime darbo sutartį.
-      \begin{align*}
-        \t{Ant popieriaus\footnotemark:} & \frac{1500 - 94,5}{0,73} &= 1925,34 LT \\
-        \t{NPD\footnotemark:} & 244,93 Lt \\
-        \t{GPM:} & 252,06 Lt \\
-        \t{PSD:} & 173,28 Lt \\
-        \t{VSD:} & 596,47 Lt \\
-        \t{GF:} & 3,85 Lt \\
-        \t{Įmonės sąnaudos:} & 2525,66 Lt \\
-      \end{align*}
-      \footnotetext{Ant popieriaus = $\frac{grynais - 94.5}{0.75}$ \\
-      formulė išsiskaičiuojama iš NPD formulės}
-	\footnotetext{NPD = $470 - 0.2 \cdot (popieriuje-800)$}
-    \item redakcijos darbuotojui A, žurnalistui, pervedė autorinėje
-      sutartyje nurodyta 800 Lt atlygį už užsienio leidinyje
-      esančio straipsnio, kuris vėliau bus publikuotas IĮ „X“
-      leidžiamajame žurnale, vertimą;
+      \end{solution}
+    \end{subtask}
+    \begin{subtask}
+      \begin{condition}
+        Redakcijos darbuotojui A, žurnalistui, kas mėnesį pervedė
+        1500 Lt dydžio atlyginimą į jo banko sąskaitą.
+      \end{condition}
+      \begin{solution}
+        Šiuo atveju turime normalią darbo sutartį.
 
-      \begin{note}
+        \pythonba{darbo}{1500 rankos}
+
+      \end{solution}
+    \end{subtask}
+    \begin{subtask}
+      \begin{condition}
+        Redakcijos darbuotojui A, žurnalistui, pervedė autorinėje
+        sutartyje nurodyta 800 Lt atlygį už užsienio leidinyje
+        esančio straipsnio, kuris vėliau bus publikuotas IĮ „X“
+        leidžiamajame žurnale, vertimą.
+      \end{condition}
+      \begin{solution}
         Kadangi dirba tą patį darbą, tai už autorinę sutartį vis tiek
         reikia mokėti tokius mokesčius, kokius mokėtų sudarius
-        darbo sutartį.
+        darbo sutartį. Kadangi \emph{pervedė}, tai tie 800 Lt yra
+        į rankas.
 
-        Kadangi \emph{autorinėje sutartyje} nurodytą (beje, paminėta,
-        kad \emph{pervedė}), tai 800 Lt yra „į rankas“.
-      \end{note}
+        \pythonba{darbo}{800 rankos}
 
-      \begin{align*}
-        \t{Į rankas:} & 800 Lt \\
-        \t{Ant popieriaus:} & 966,44 Lt \\
-        \t{NPD} &= 470-0,2\cdot(966,44 - 800) &= 436,71 Lt \\
-        \t{GPM:} & 79,46 Lt \\
-        \t{PSD:} & 86,98 Lt \\
-        \t{VSDF:} & 299,40 Lt \\
-        \t{GF:} & 1,93 Lt \\
-        \t{Įmonės sąnaudos:} & 1267,77 Lt \\
-      \end{align*}
-    \item radakcijos darbuotojui B, žurnalistui, kas mėnesį pervedė
-      2300 Lt darbo sutartyje nurodyto darbo užmokesčio už tiesiogines
-      atliekamas pareigas ir 200 Lt autorinėje sutartyje
-      nurodyto atlygio už žurnalo viršelio maketą;
-
-      \begin{note}
+      \end{solution}
+    \end{subtask}
+    \begin{subtask}
+      \begin{condition}
+        Radakcijos darbuotojui B, žurnalistui, kas mėnesį pervedė
+        2300 Lt darbo sutartyje nurodyto darbo užmokesčio už tiesiogines
+        atliekamas pareigas ir 200 Lt autorinėje sutartyje
+        nurodyto atlygio už žurnalo viršelio maketą;
+      \end{condition}
+      \begin{solution}
         Kadangi redaktoriui nepriklauso daryti maketus, tai galima
         daryti autorinę sutartį.
-      \end{note}
 
-      \begin{align*}
-        \t{Į rankas:} & 2300 Lt \\
-        \t{Ant popieriaus:} & 3021,23 Lt \\
-        \t{NPD:} & 25,75 Lt \\
-        \t{GPM:} & 449,32 Lt \\
-        \t{PSD:} & 271,91 Lt \\
-        \t{VSD:} & 935,98 Lt \\
-        \t{GF:} & 6,04 Lt \\
-        \t{Darbo vietos kaina:} & 3963,25 Lt \\
-        \t{Į rankas:} & 200 Lt \\
-        \t{Ant popieriaus:} & 263,16 Lt \\
-        \t{GPM:} & 39,47 Lt \\
-        \t{PSD:} & 23,68 Lt \\
-        \t{VSD:} & 81,53 Lt \\
-        \t{Įmonės sąnaudos:} & 344,68 Lt \\
-      \end{align*}
+        Už tiesioginį darbą:
 
-    \item gavo 180000 Lt pajamų iš žurnalo pardavimų, UAB „Y“ sumokėjo
-      50000 Lt už žurnalo spaudą.
+        \pythonba{darbo}{2300 rankos}
+        
+        Už maketavimą:
 
-      PVM = $(180000 - 50000)\cdot 0,21 = 27300$ Lt
+        \pythonba{autorine|su|darbu}{200 rankos}
 
-  \end{itemize}
-\end{exmp}
+      \end{solution}
+    \end{subtask}
+    \begin{subtask}
+      \begin{condition}
+        Gavo 180000 Lt pajamų iš žurnalo pardavimų, UAB „Y“
+        sumokėjo 50000 Lt už žurnalo spaudą.
+      \end{condition}
+      \begin{solution}
+        TODO: Parašyti programą.
+
+        PVM = $(180000 - 50000)\cdot 0,21 = 27300$ Lt
+      \end{solution}
+    \end{subtask}
+  \end{task}
+
+\end{tasks}
