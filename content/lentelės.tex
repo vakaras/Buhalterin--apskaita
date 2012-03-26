@@ -68,11 +68,33 @@ Jei $P$ yra gautos pajamos, o $S$ yra sąnaudos, o $L$ leidžiami
 atskaitymai, tai teisingi tokie sąryšiai:
 
 \begin{tabularx}{15cm}{p{7.5cm}|p{7.5cm}}
-  GPM: & $(P - L) \cdot 15\%$, jei $P \in$ laisvųjų profesijų veikla arba
-    vertybinių popierių \\
-  GPM: & $(P - L) \cdot 5\%$, kitu atveju \\
-  PVM: & $(P - 100 000 Lt) \cdot 21\%$, jei $P \geq 100 000 Lt$ \\
-  PSDF(mėnesio): & $MMA \cdot 9\% = 72 Lt$ \\
-  PSDF(metų): & $(P - S) \cdot 9\%$ \\
-  VSDF: & $\frac{P-S}{2} \cdot 28,5$ \\
+%  GPM: & $(P - L) \cdot 15\%$, jei $P \in$ laisvųjų profesijų veikla arba
+%    vertybinių popierių \\
+%  GPM: & $(P - L) \cdot 5\%$, kitu atveju \\
+%  PVM: & $(P - 100 000 Lt) \cdot 21\%$, jei $P \geq 100 000 Lt$ \\
+ 
+  AP: P - S
+  VSDF: 28.5\% $\cdot$ AP
+  PVM: & (P - S) $\cdot$ 21\% \\
+  
+  \begin{itemize}
+  	\item Jei Skaičiuojam: Pajamos - Sąnaudos
+	\begin{itemize}
+		\item GPM „bazė“: AP - VSDF - PSDF
+  		\item MNPD: 5640 - 0.2 $\cdot$ („bazė“ - 9600)
+  		\item GPM: („bazė“ - MNPD) $\cdot$ 5\%
+	\end{itemize}	  	
+  	
+  	\item Jei Skaičiuojam: Kad sąnaudos buvo 30\%
+  	\begin{itemize}
+  		\item AP: P $\cdot$ 70\%
+  		\item GPM: AP $\cdot$ 5\%
+  	\end{itemize}
+  \end{itemize}
+
+  
+  
+%  PSDF(mėnesio): & $MMA \cdot 9\% = 72 Lt$ \\
+%  PSDF(metų): & $(P - S) \cdot 9\%$ \\
+%  VSDF: & $\frac{P-S}{2} \cdot 28,5$ \\
 \end{tabularx}
