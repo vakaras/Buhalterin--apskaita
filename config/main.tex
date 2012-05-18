@@ -4,10 +4,16 @@
 \usepackage{python3ba}
 \usepackage{tabularx}
 
+\newcounter{tasklistcounter}
 \newcounter{taskcounter}
 \newcounter{subtaskcounter}
 
-\newenvironment{tasks}{\setcounter{taskcounter}{1}}{}
+\setcounter{tasklistcounter}{1}
+
+\newenvironment{tasks}{%
+\addtocounter{tasklistcounter}{1}%
+\setcounter{taskcounter}{1}%
+}{}
 
 \newenvironment{task}{%
   \strong{\arabic{taskcounter} užduotis.} \\
@@ -19,6 +25,16 @@
   }{}
 \newenvironment{condition}{\emph{Sąlyga.}}{\hfill\\}
 \newenvironment{solution}{\emph{Sprendimas.\\}}{}
+\newcommand{\titem}[1]{%
+\item \label{testitem:%
+\arabic{tasklistcounter}:\arabic{taskcounter}:\arabic{subtaskcounter}:#1}}
+\newcommand{\tref}[1]{%
+\ref{testitem:%
+\arabic{tasklistcounter}:\arabic{taskcounter}:\arabic{subtaskcounter}:#1}}
+
+\def\slideprefixvalue{None}
+\newcommand{\setslideprefix}[1]{\def\slideprefixvalue{#1}}
+\newcommand{\slide}[1]{Skaidrė: \strong{\slideprefixvalue#1}}
 
 \begin{document}
   \input{global-config.tex}
