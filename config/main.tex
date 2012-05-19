@@ -36,6 +36,16 @@
 \newcommand{\setslideprefix}[1]{\def\slideprefixvalue{#1}}
 \newcommand{\slide}[1]{Skaidrė: \strong{\slideprefixvalue#1}}
 
+\newcommand{\tablewidth}{12cm}
+\newenvironment{PlaneTable}[1]{%
+\tabularx{\tablewidth}[]{X | X}%
+\hline
+\multicolumn{2}{ c }{Debetas \hfill #1 \hfill Kreditas}\\
+\hline
+}{%
+\endtabularx
+}
+
 \begin{document}
   \input{global-config.tex}
   \maketitle
