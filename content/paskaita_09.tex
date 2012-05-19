@@ -1,41 +1,237 @@
-\chapter{Ūkinės operacijos fiksavimas}
+\chapter{7 paskaita}
 
-Debetas Sąskaitos pavadinimas Kreditas
+\setslideprefix{12 - ukines operacijos ir klases/skaidres.pdf:}
+
+\section{Ūkinės operacijos fiksavimas}
+
+\slide{2}
+
+Kiekviena ūkinė operacija, susijusi su turto ar nuosavybės pasikeitimu,
+turi būti užregistruota nustatyta tvarka ir atsispindėti metinėje
+finansinėje atskaitomybėje, kuri pateikiama įmonės valdytojams bei
+išoriniams naudotojams, norintiems žinoti, kokiu turtu disponuoja
+įmonė ir kam šis turtas priklauso.
+
+\section{Duomenys sąskaitose}
+
+\slide{3}
+
+Duomenys į sąskaitas atkeliauja iš pirminių dokumentų, todėl
+būtų pravartu į jas įrašyti ne tik besikeisiančias turto ar nuosavybės
+sumas, bet ir pažymėti, iš kokių pirminių dokumentų jos atliekamos.
+Tai padėtų greičiau patikrinti iš kur yra paimti duomenys.
+
+\section{„Lėktuvėlis“}
+
+\slide{4}
+
+\begin{PlaneTable}{Sąskaitos pavadinimas}
+  xxx & yyy \\
+\end{PlaneTable}
 
 \section{Pokyčiai pinigų sąskaitoje}
 
+\slide{5}
+
+\begin{tabularx}{\tablewidth}[]{X | l | X}
+  Data & Pinigų įplaukos arba išlaidos & Suma \\
+  \hline
+  2011-01-01 & Gauta & 800 \\
+  2011-01-03 & Išmokėta & 500 \\
+  2011-01-04 & Gauta & 1200 \\
+  2011-01-05 & Išmokėta & 300 \\
+  2011-01-10 & Išmokėta & 450 \\
+  2011-01-11 & Gauta & 100 \\
+  2011-01-15 & Gauta & 250 \\
+  2011-01-20 & Išmokėta & 750 \\
+\end{tabularx}
+
 \section{Sąskaita „Pinigai“}
+
+\slide{6}
+
+\begin{tabularx}{\tablewidth}[]{X | X | X | X}
+  Data & Debetas & Kreditas & Likutis \\
+  \hline
+  2011-01-01 & 800  &       & 800  \\
+  2011-01-03 &      & 500   & 300  \\
+  2011-01-04 & 1200 &       & 1500 \\
+  2011-01-05 &      & 300   & 1200 \\
+  2011-01-10 &      & 450   & 750  \\
+  2011-01-11 & 100  &       & 850  \\
+  2011-01-15 & 250  &       & 1100 \\
+  2011-01-20 &      & 750   & 350  \\
+\end{tabularx}
+
+\slide{7}
+
+\begin{tabularx}{\tablewidth}[]{X | X | X}
+  Data & Gauta & Išleista  \\
+  \hline
+  2011-01-01 & 800  &     \\
+  2011-01-03 &      & 500 \\
+  2011-01-04 & 1200 &     \\
+  2011-01-05 &      & 300 \\
+  2011-01-10 &      & 450 \\
+  2011-01-11 & 100  &     \\
+  2011-01-15 & 250  &     \\
+  2011-01-20 &      & 750 \\
+  \hline
+  Iš viso:   & 2350 & 2000 \\
+\end{tabularx}
 
 \section{Debeto sąvoka}
 
+\slide{8}
+
+Tai kairioji buhalterinių sąskaitų pusė, kurioje yra apskaitomi skolinimų
+įsipareigojimai. Turto sąskaitose debeto įrašai reiškia apskaitomos
+sumos padidėjimą, o įsipareigojimų – sumažėjimą.
+
+DLKŽ + TŽŽ:
+\begin{description}
+  \item[dèbetas] – fin. sąskaitos įplaukos ir skolos bei išlaidos,
+    įrašomos buhalterijos knygų kairiojoje pusėje;
+  \item[dèbetas] (lot. debet – jis skolingas) – fin. buhalterinių sąskaitų
+    kairioji pusė, rodanti skolininkų įsiskolinimo apskaitą; aktyvinėse
+    sąskaitose debeto įrašai reiškia apskaitomų sumų padidėjimą,
+    pasyvinėse – sumažėjimą.
+\end{description}
+
 \section{Kredito sąvoka}
+
+\slide{9}
+
+Tai dešinioji buhalterinių sąskaitų pusė, kurioje yra apskaitomi įmonės
+įsipareigojimai.
+
+DLKŽ + TŽŽ:
+\begin{description}
+  \item[krèditas] – sąskaitos įplaukos ir skolos bei išlaidos, įrašomos
+    buhalterijos knygų dešiniojoje pusėje;
+  \item[kredìtas] – fin. 1. prekių ar pinigų skolinimas, ppr. už palūkanas,
+    paskola. 2. asignuojamos lėšos.
+\end{description}
 
 \section{„T“ formos sąskaitos (lėktuvėliai)}
 
-1, 2 klasės. (1 klasė ilgalaikis, o 2– trumpalaikis).
+\slide{10}
 
-D+
+Apskaitininkai patys pasirenka sąskaitos formą ir joje atspindimos
+informacijos kiekį, tačiau visose buhalterinėse sąskaitose būtinai
+skiriamos debeto ir kredito skiltys.
 
-K-
+\slide{11}
 
-3, 4 klasės:
-D- K+
+\begin{PlaneTable}{Turto sąskaitos (1,2 klasė)}
+  Objekto padidėjimai & Objekto sumažėjimai \\
+\end{PlaneTable}
 
-5 klasė (pajamų klasė)
-K+
+1 klasė yra ilgalaikis turtas, 2 – trumpalaikis.
 
-6 klasė (sąnaudų klasė)
-D+
+\begin{PlaneTable}{Nuosavybės sąskaitos (3,4 klasė)}
+  Objekto sumažėjimai & Objekto padidėjimai \\
+\end{PlaneTable}
+
+\slide{12}
+
+\begin{PlaneTable}{Pajamų sąskaitos (5 klasė)}
+  Objekto sumažėjimai & Objekto padidėjimai \\
+\end{PlaneTable}
+
+\begin{PlaneTable}{Sąnaudų sąskaitos (6 klasė)}
+  Objekto padidėjimai & Objekto sumažėjimai \\
+\end{PlaneTable}
+
+\section{Debeto ir kredito taisyklė}
+
+\slide{13}
+
+\begin{PlaneTable}{Taisyklė}
+  Turto 1, 2 kl. (+) & Turto 1, 2 kl. (-) \\
+  Sąnaudų 6 kl. (+) & Sąnaudų 6 kl. (-) \\
+  Pajamų 5 kl. (-) & Pajamų 5 kl. (+) \\
+  Nuosavybės 3, 4 kl. (-) & Nuosavybės 3, 4 kl. (+) \\
+\end{PlaneTable}
+
+\section{Sąskaitos}
+
+\slide{14}
+
+\begin{PlaneTable}{Turto sąskaita}
+  Likutis pradžiai & \\
+  Padidėjimas (+) & Sumažėjimas (-) \\
+  Likutis pabaigai & \\
+\end{PlaneTable}
+
+\begin{PlaneTable}{Nuosavybės sąskaita}
+  & Likutis pradžiai \\
+  Sumažėjimas (-) & Padidėjimas (+) \\
+  & Likutis pabaigai \\
+\end{PlaneTable}
+
+\begin{PlaneTable}{Sąnaudų sąskaita}
+  Likutis pradžiai & \\
+  Padidėjimas (+) & Sumažėjimas (-) \\
+  Likutis pabaigai & \\
+\end{PlaneTable}
+
+\begin{PlaneTable}{Pajamų sąskaita}
+  & Likutis pradžiai \\
+  Sumažėjimas (-) & Padidėjimas (+) \\
+  & Likutis pabaigai \\
+\end{PlaneTable}
 
 \section{Sąskaitų planas}
 
+\slide{15}
+
+Tai visų įmonėje naudojamų sąskaitų sąrašas, kuriame pateikiami visų
+sąskaitų pavadinimai bei numeriai.
+
+Pavyzdinis sąskaitų planas yra parodomasis, kuriuo nebūtina vadovautis,
+bet jis gali būti taikomas kaip paaiškinamoji ūkinių faktų atspindėjimo
+apskaitoje priemonė ir kuriuo remiantis įmonės pagal savo veiklos pobūdį
+parengia savo individualų sąskaitų planą.
+
 \section{Sąskaitų plano klasės}
+
+\slide{16}
+
+\slide{17}
+
+\begin{description}
+  \item[Pirmoji klasė.] Joje fiksuojamas ilgalaikis turtas.
+  \item[Antroji klasė.] Joje fiksuojamas trumpalaikis turtas.
+  \item[Trečioji klasė.] Joje fiksuojama savininkų nuosavybė arba įmonės
+    įsipareigojimai savininkams bei gautos subsidijos ir dotacijos.
+    Savininkų nuosavybę sudaro ne tik kapitalas, rezervai, mokesčių
+    atidėjimai, bet ir nepaskirstytasis pelnas.
+  \item[…] Ups…
+  \item[Septintoji, aštuntoji, devintoji klasės] Šios klasės yra paliktos
+    laisvos, nes jos yra skirtos įmonės vidinei apskaitai, o šios
+    apskaitos įstatymai nereglamentuoja, jos vedimo tvarką kiekviena
+    įmonė pasirenka savo nuožiūra.
+  \item[Nulinė klasė.] Ši klasė palikta atspindėti įmonėje esantį turtą
+    ar įsipareigojimus, kurie neturi tiesioginio ryšio su įmonės turtu
+    bei nuosavybe.
+\end{description}
 
 \section{Buhalterinės apskaitos organizavimas}
 
+\slide{18}
+
+\slide{19}
+
 \section{Pirminiai apskaitos dokumentai}
 
+\slide{20}
+
+\slide{21}
+
 \chapter{Uždaviniai}
+
+\slide{22}
 
 1. Apskaitos požiūriu individualios (personalinės įmonės nuosavybė):
 d) turi būti atskirta nuo savininko nuosavybės.
